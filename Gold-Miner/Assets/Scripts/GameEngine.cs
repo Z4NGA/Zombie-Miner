@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameEngine : MonoBehaviour
 {   
@@ -17,7 +18,9 @@ public class GameEngine : MonoBehaviour
     }
     public void startGame()
     {
-        //Player.newplayer();
+        string username = GameObject.Find("newgameMenu").transform.Find("name").transform.Find("name_area").transform.Find("name_field").transform.Find("text_area").transform.Find("text").GetComponent<TextMeshProUGUI>().text;
+        if (username.Length>1) PlayerPrefs.SetString("user_name", username);
+        else PlayerPrefs.SetString("user_name", "new player");
         SceneManager.LoadScene(1); //assuming scene 1 will be level 1
         currentLevel = 1;
     }
