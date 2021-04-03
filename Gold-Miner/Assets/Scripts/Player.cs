@@ -3,7 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 public class Player : MonoBehaviour
-{/*
+{
+
+    public Transform grabbed_object;
+    public Vector3 offset_to_grabbed_object;
+    private float min_angle = -150;
+    private float max_angle = -30;
+    private float min_reach = 0.5f;
+    private float max_reach = 5;
+    private float current_reach = 0.5f;
+    private float current_angle = -150;
+    private bool angle_min_to_max = true;
+    private bool swinging = true;
+    private bool reach_min_to_max = true;
+    public float angle_speed = 120;
+    public float reach_speed = 5;
+    private LineRenderer rope;
+    private Transform claw; 
+    /*
     public bool isAlive;
     bool is_invincible;
     public GameObject inventory_gui,DeathMenu,bg_pause,counter;
@@ -86,59 +103,120 @@ public class Player : MonoBehaviour
         current_speed = initial_speed;
         current_damage = initial_damage;
 
-    }
+    }*/
     private void Awake()
     {
-        is_invincible = false;
-        isAlive = true;
-        initial_health = 500;
-        current_health = initial_health; //starts at full hp
-        coins = 200; //starts with 200 base coins 
-        gems = 0;//starts with 0 gems
-        num_health_pot =0 ;
-        num_speed_pot=0;
-        num_damage_pot=0;
-        initial_armor = 0; //starts with 0 armor
-        current_armor = initial_armor; // current armor starts same  as initial
-        has_armor = false; //player starts without armor
-        current_level = 0;
-        current_xp = 0;
-        initial_speed = 10;
-        current_speed = initial_speed;
-        initial_damage = 25;
-        current_damage = initial_damage;
-        armor_level = 0;
-        loadPlayer();
+        /* is_invincible = false;
+         isAlive = true;
+         initial_health = 500;
+         current_health = initial_health; //starts at full hp
+         coins = 200; //starts with 200 base coins 
+         gems = 0;//starts with 0 gems
+         num_health_pot =0 ;
+         num_speed_pot=0;
+         num_damage_pot=0;
+         initial_armor = 0; //starts with 0 armor
+         current_armor = initial_armor; // current armor starts same  as initial
+         has_armor = false; //player starts without armor
+         current_level = 0;
+         current_xp = 0;
+         initial_speed = 10;
+         current_speed = initial_speed;
+         initial_damage = 25;
+         current_damage = initial_damage;
+         armor_level = 0;
+         loadPlayer();*/
+        grabbed_object = null;
+        offset_to_grabbed_object = new Vector3(0,0);
+        rope = transform.Find("rope").GetComponent<LineRenderer>();
+        claw = transform.Find("claw");
+        rope.SetPosition(1, calc_position(rope.GetPosition(0), current_angle,current_reach));
+        claw.Rotate(0, 0, current_angle+90);
     }
-    private void Update()
+    private Vector3 calc_position(Vector3 posO,float angle,float reach)
     {
-        if (current_health <= 0)
-        {   if (!isAlive)
-            {
-                if ((death_time - Time.time) <= 0) { 
-                    GameObject.Find("GameEngine").GetComponent<GameEngine>().selectMain();
-                    return;
-                }
-                counter.GetComponent<TextMeshProUGUI>().SetText((Mathf.Floor(death_time - Time.time)).ToString());
-                return;
-            }
-            death_time = Time.time+10;
-            isAlive = false;
-            GetComponent<Animator>().SetBool("isDead", true);
-            if(DeathMenu!=null)DeathMenu.SetActive(true);
-            if(bg_pause!=null) bg_pause.SetActive(true);
-        }
-        if (isAlive)
-        {
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                inventory_gui.GetComponent<inventory_ui>().is_active = !inventory_gui.GetComponent<inventory_ui>().is_active;
-                inventory_gui.SetActive(inventory_gui.GetComponent<inventory_ui>().is_active);
-                inventory_gui.GetComponent<inventory_ui>().update_stats();
-            }
-        }
+        return new Vector3(reach*Mathf.Cos(Mathf.Deg2Rad * angle)+posO.x, reach*Mathf.Sin(Mathf.Deg2Rad * angle)+posO.y);
     }
 
+    private void Update()
+    {
+        if (grabbed_object!=null) 
+        {
+            reach_min_to_max = false;
+            swinging = false;
+            current_reach -= (reach_speed/1) * Time.deltaTime;//change to percent
+            if (current_reach <= min_reach)
+            {
+                reach_min_to_max = true;
+                current_reach = min_reach;
+                swinging = true;
+                Destroy(grabbed_object.gameObject);
+                grabbed_object = null;
+            }
+        }
+        else
+        {
+            if (swinging)
+            {
+                if (angle_min_to_max)//direction is min angle to max angle
+                {
+                    current_angle += angle_speed * Time.deltaTime;
+                    claw.Rotate(0, 0, angle_speed * Time.deltaTime);
+                    if (current_angle >= max_angle)
+                    {
+                        angle_min_to_max = false;
+                        current_angle = max_angle;
+                    }
+                }
+                else
+                {
+                    current_angle -= angle_speed * Time.deltaTime;
+                    claw.Rotate(0, 0, -angle_speed * Time.deltaTime);
+                    if (current_angle <= min_angle)
+                    {
+                        angle_min_to_max = true;
+                        current_angle = min_angle;
+                    }
+                }
+                transform.Find("crane").GetComponent<Animator>().SetBool("active", false);
+                transform.Find("character").GetComponent<Animator>().SetBool("active", false);
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    swinging = false;
+                    transform.Find("crane").GetComponent<Animator>().SetBool("active", true);
+                    transform.Find("character").GetComponent<Animator>().SetBool("active", true);
+                }
+            }
+            else
+            {
+                //if not swinging then reaching
+                if (reach_min_to_max)//direction is min angle to max angle
+                {
+                    current_reach += reach_speed * Time.deltaTime;
+                    if (current_reach >= max_reach)
+                    {
+                        reach_min_to_max = false;
+                        current_reach = max_reach;
+                    }
+                }
+                else
+                {
+                    current_reach -= reach_speed * Time.deltaTime;
+                    if (current_reach <= min_reach)
+                    {
+                        reach_min_to_max = true;
+                        current_reach = min_reach;
+                        swinging = true;
+                    }
+                }
+
+            }
+        }
+        rope.SetPosition(1, calc_position(rope.GetPosition(0), current_angle,current_reach));
+        claw.position = calc_position(rope.GetPosition(0), current_angle, current_reach);
+        if(grabbed_object!=null) grabbed_object.position = calc_position(rope.GetPosition(0), current_angle, current_reach)+offset_to_grabbed_object;
+    }
+    /*
     public  void spendCoins(int amount)
     {
         if (coins >= amount)
