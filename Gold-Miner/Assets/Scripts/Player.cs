@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private float min_angle = -150;
     private float max_angle = -30;
     private float min_reach = 0.5f;
-    private float max_reach = 5;
+    private float max_reach = 6;
     private float current_reach = 0.5f;
     private float current_angle = -150;
     private bool angle_min_to_max = true;
