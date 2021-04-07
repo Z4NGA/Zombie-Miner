@@ -5,42 +5,42 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class player_ui : MonoBehaviour
-{/*
+{
     //sprites 
-    public Sprite available, in_progress, completed;
+    private Transform day_prog_bar;
     //containers
-    private Transform hp_container, shield_container, pot_container, currency_container, quest_container;
-    private Transform xp_container;
-    private Transform lvl_up_container; 
-    //templates
-    private Transform hp_bar_sprite,shield_bar_sprite,xp_bar_sprite; 
+    private Transform time_container,level_prog_container,day_prog_container,dynamite_container;
 
-    private Transform potion_template;
-    private Transform coin_template,gem_template;
-    private Transform quest_template;
+    //days
+    private Transform day1_frame, day2_frame, day3_frame, day4_frame, day5_frame;
+    private Transform day1_bg, day2_bg, day3_bg, day4_bg, day5_bg;
     // Update is called once per frame
     //timer
-    float last_lvl_up = 0;
-    private int last_hp_pot, last_dmg_pot, last_speed_pot,last_coins,last_gems,last_level;//last registered values
+    private int last_dynamite, last_money,last_day,last_level;//last registered values
     private void Awake()
-    { 
-        hp_container = transform.Find("hp_container");
-        shield_container = transform.Find("shield_container");
-        xp_container = transform.Find("xp_container");
-        lvl_up_container = transform.Find("level_up_container");
-        pot_container = transform.Find("pot_container");
-        currency_container = transform.Find("currency_container");
-        quest_container = transform.Find("quest_container");
-        quest_template = quest_container.Find("quest_template");
-        coin_template = currency_container.Find("coin_template");
-        gem_template = currency_container.Find("gem_template");
-        potion_template = pot_container.Find("potion_template");
-        hp_bar_sprite = hp_container.Find("bar").Find("bar_sprite");
-        shield_bar_sprite = shield_container.Find("bar").Find("bar_sprite");
-        xp_bar_sprite = xp_container.Find("bar").Find("bar_sprite");
-        potion_template.gameObject.SetActive(false);
-        quest_template.gameObject.SetActive(false);
-    }
+    {
+        time_container = transform.Find("time_container");
+        level_prog_container = transform.Find("level_prog_container");
+        day_prog_container = transform.Find("day_prog_container");
+        dynamite_container = transform.Find("dynamite_container");
+        day_prog_bar = day_prog_container.Find("progress").Find("bar").Find("fill");
+        day1_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("1");
+        day1_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("1");
+        day2_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("2");
+        day2_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("2");
+        day3_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("3");
+        day3_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("3");
+        day4_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("4");
+        day4_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("4");
+        day5_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("5");
+        day5_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("5");
+        day1_frame.gameObject.SetActive(false); day1_bg.gameObject.SetActive(false);
+        day2_frame.gameObject.SetActive(false); day2_bg.gameObject.SetActive(false);
+        day3_frame.gameObject.SetActive(false); day3_bg.gameObject.SetActive(false);
+        day4_frame.gameObject.SetActive(false); day4_bg.gameObject.SetActive(false);
+        day5_frame.gameObject.SetActive(false); day5_bg.gameObject.SetActive(false);
+
+    }/*
     private void Start()
     {
         last_hp_pot =Player.num_health_pot; last_dmg_pot = Player.num_damage_pot; last_speed_pot = Player.num_speed_pot; last_coins = Player.coins;last_gems = Player.gems;
