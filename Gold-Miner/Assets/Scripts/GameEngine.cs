@@ -69,9 +69,18 @@ public class GameEngine : MonoBehaviour
         else Debug.Log("Error !! Scene 3 doesn't exist !!");
 
     }
+    public void pause()
+    {
+        Player.in_game = false;
+    }
+    public void resume()
+    {
+        Player.in_game = true;
+    }
     public void restart() //for retrying a level
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Player.in_game = true;
     }
     public void nextLevel()
     {

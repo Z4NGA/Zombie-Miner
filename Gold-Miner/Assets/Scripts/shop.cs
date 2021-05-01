@@ -5,45 +5,47 @@ using UnityEngine;
 
 public class shop : MonoBehaviour
 {
-    public  GameObject shop_gui;
-    private Collider2D player=null; 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Player>() != null) //only interacts with players
-        {
-            player = collision.GetComponent<Collider2D>();
-            Transform txt = Instantiate(itemAssets.instance.popup_text, new Vector3(75,46.5f),Quaternion.identity);
-            Player.in_shop_range = true;
-            Debug.Log(Player.in_shop_range);
-            txt.GetComponent<TextMeshPro>().SetText("press b to enter/exit the shop");
-            Destroy(txt.gameObject, 3f);
+    private const float shop_time = 45;
+    public GameObject shop_gui;
+    public static bool open_shop = false;
+    private bool shop_on = false;
+    public static float remaining_time=0;
 
-            Debug.Log("press b to enter/exit the shop :");
- 
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Player>() != null)
-        {
-            Player.in_shop_range = false;
-            Debug.Log(Player.in_shop_range);
-        }
-    }
     private void Update()
     {
-        
-       if(player !=null&& (gameObject.GetComponent<BoxCollider2D>().IsTouching(player)))
-       {
-            if (Input.GetKeyDown(KeyCode.B))
+        if (!shop_on)
+        {
+            if (open_shop)
             {
-                if (!shop_gui.activeSelf)
+                remaining_time = shop_time;
+                shop_on = true;
+                if (shop_gui != null)
                 {
                     shop_gui.SetActive(true);
-                    if(shop_gui.GetComponent<shop_ui>()!=null) shop_gui.GetComponent<shop_ui>().update_currency();
+                    shop_gui.GetComponent<shop_ui>().activate_shop_items(Player.current_day);
                 }
-                else shop_gui.SetActive(false);
+                else Debug.Log("no shop interface found !!");
             }
-       }
-    }*/
+        }
+        else
+        {
+            remaining_time = remaining_time - Time.deltaTime <= 0 ? 0 : remaining_time - Time.deltaTime;
+            if (remaining_time <= 0)
+            {
+                close_shop();
+            }
+        }
+    }
+    public void close_shop()
+    {
+        shop_on = false;
+        open_shop = false;
+        if (shop_gui != null)
+        {
+            shop_gui.SetActive(false);
+            shop_gui.GetComponent<shop_ui>().deactivate_shop_items(Player.current_day);
+        }
+        else Debug.Log("no shop interface found !!");
+        GameObject.Find("player").GetComponent<Player>().start_next_day();
+    }
 }

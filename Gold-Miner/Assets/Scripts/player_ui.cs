@@ -16,7 +16,7 @@ public class player_ui : MonoBehaviour
     private Transform day1_bg, day2_bg, day3_bg, day4_bg, day5_bg;
     // Update is called once per frame
     //timer
-    private int last_dynamite, last_money,last_day,last_level;//last registered values
+    private int last_dynamite, last_money,last_day,last_level,last_goal;//last registered values
     private void Awake()
     {
         time_container = transform.Find("time_container");
@@ -24,6 +24,7 @@ public class player_ui : MonoBehaviour
         day_prog_container = transform.Find("day_prog_container");
         dynamite_container = transform.Find("dynamite_container");
         day_prog_bar = day_prog_container.Find("progress").Find("bar").Find("fill");
+
         day1_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("1");
         day1_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("1");
         day2_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("2");
@@ -40,165 +41,61 @@ public class player_ui : MonoBehaviour
         day4_frame.gameObject.SetActive(false); day4_bg.gameObject.SetActive(false);
         day5_frame.gameObject.SetActive(false); day5_bg.gameObject.SetActive(false);
 
-    }/*
+    }
     private void Start()
     {
-        last_hp_pot =Player.num_health_pot; last_dmg_pot = Player.num_damage_pot; last_speed_pot = Player.num_speed_pot; last_coins = Player.coins;last_gems = Player.gems;
-        last_level = Player.current_level;
-        display_stats();
-        display_potions();
-        display_coins();
+        last_money =Player.current_money; last_goal = Player.goal_money; last_day = Player.current_day;
+        last_dynamite = Player.nr_of_dynamite;last_level = Player.current_level;
+        display_progress();
     }
     
     void Update() //shouldn't be used to redisplay sprites each second , only when damage is registered
     {
-        if (lvl_up_container.gameObject.activeSelf)
-        {
-            if (Time.time > last_lvl_up + 3) lvl_up_container.gameObject.SetActive(false);
-        }
-        update_potions();
-        update_coins();
         update_stats();
     }
     void update_stats()
     {
-        //bar update
-        hp_bar_sprite.localScale = new Vector3((float)Player.current_health / Player.initial_health, 1);
-        xp_bar_sprite.localScale = new Vector3((float)Player.current_xp / Player.current_lvl_xp(), 1);
+        //progress bar and positions update
+        float prog = (float)Player.current_money / Player.goal_money ;
+        day_prog_bar.localScale = prog <= 1 ? new Vector3(1, prog) : new Vector3(1, 1);
+        if (prog <= 0.85)
+        {
+            day_prog_container.Find("progress").Find("current").localPosition = new Vector3(day_prog_container.Find("progress").Find("current").localPosition.x, day_prog_container.Find("progress").Find("goal").localPosition.y * prog);
+            day_prog_container.Find("progress").Find("goal").gameObject.SetActive(true);
+        }
+        else
+        {
+            day_prog_container.Find("progress").Find("goal").gameObject.SetActive(false);
+            day_prog_container.Find("progress").Find("current").localPosition = day_prog_container.Find("progress").Find("goal").localPosition;
+        }
         //values update
-        hp_container.Find("values").Find("initial_value").GetComponent<TextMeshProUGUI>().SetText(Player.initial_health.ToString());
-        hp_container.Find("values").Find("current_value").GetComponent<TextMeshProUGUI>().SetText(Player.current_health.ToString());
-        shield_container.Find("values").Find("initial_value").GetComponent<TextMeshProUGUI>().SetText(Player.initial_armor.ToString());
-        shield_container.Find("values").Find("current_value").GetComponent<TextMeshProUGUI>().SetText(Player.current_armor.ToString());
-        xp_container.Find("values").Find("initial_value").GetComponent<TextMeshProUGUI>().SetText(Player.current_lvl_xp().ToString());
-        xp_container.Find("values").Find("current_value").GetComponent<TextMeshProUGUI>().SetText(Player.current_xp.ToString());
-        if (Player.initial_armor > 0) shield_bar_sprite.localScale = new Vector3((float)Player.current_armor / Player.initial_armor, 1);
-        else shield_bar_sprite.localScale = new Vector3(0, 1);
-        if (Player.current_level != last_level)
+        if (last_money != Player.current_money)
         {
-            last_level = Player.current_level;
-            last_lvl_up = Time.time;
-            lvl_up_container.gameObject.SetActive(true);
+            day_prog_container.Find("progress").Find("current").GetComponent<TextMeshProUGUI>().SetText(Player.current_money.ToString()+" $");
+            last_money = Player.current_money;
         }
-    }
-    void display_stats()
-    {
-        hp_bar_sprite.localScale = new Vector3((float)Player.current_health/Player.initial_health, 1);
-        xp_bar_sprite.localScale = new Vector3((float)Player.current_xp / Player.current_lvl_xp(), 1);
-        if (Player.initial_armor > 0) shield_bar_sprite.localScale = new Vector3((float)Player.current_armor / Player.initial_armor, 1);
-        else shield_bar_sprite.localScale = new Vector3(0, 1);
-    }
-    void display_coins()
-    {
-        coin_template.Find("coin_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.coins.ToString());
-        gem_template.Find("gem_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.gems.ToString());
-    }
-    void update_coins()
-    {
-        if (last_coins != Player.coins)
-        {
-            coin_template.Find("coin_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.coins.ToString());
-            last_coins = Player.coins;
-        }
-        if (last_gems != Player.gems)
-        {
-            gem_template.Find("gem_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.gems.ToString());
-            last_gems = Player.gems;
-        }
-    }
-    void display_buffs()
-    {
 
+        if (last_goal != Player.goal_money)
+        {
+            day_prog_container.Find("progress").Find("goal").GetComponent<TextMeshProUGUI>().SetText(Player.goal_money.ToString()+" $");
+            last_goal = Player.goal_money;
+        }
+
+        if (last_dynamite != Player.nr_of_dynamite)
+        {
+            dynamite_container.Find("quantity").GetComponent<TextMeshProUGUI>().SetText(Player.nr_of_dynamite.ToString());
+            last_dynamite = Player.nr_of_dynamite;
+        }
+
+        time_container.Find("time").GetComponent<TextMeshProUGUI>().SetText(Mathf.Round(Player.remaining_time).ToString());
     }
-    void display_potions()
+    void display_progress()
     {
-        Transform temp_pot = Instantiate(potion_template, pot_container);
-        temp_pot.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-        temp_pot.name = "hp_potion";
-        temp_pot.Find("potion_icon").GetComponent<Image>().sprite = Items.getSprite(Items.Item_type.health_potion);
-        temp_pot.Find("potion_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.num_health_pot.ToString());
-        temp_pot.gameObject.SetActive(true);
-        temp_pot = Instantiate(potion_template, pot_container);
-        temp_pot.GetComponent<RectTransform>().anchoredPosition = new Vector2(-150, 0);
-        temp_pot.name = "dmg_potion";
-        temp_pot.Find("potion_icon").GetComponent<Image>().sprite = Items.getSprite(Items.Item_type.damage_potion);
-        temp_pot.Find("potion_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.num_damage_pot.ToString());
-        temp_pot.gameObject.SetActive(true);
-        temp_pot = Instantiate(potion_template, pot_container);
-        temp_pot.GetComponent<RectTransform>().anchoredPosition = new Vector2(-300, 0);
-        temp_pot.name = "speed_potion";
-        temp_pot.Find("potion_icon").GetComponent<Image>().sprite = Items.getSprite(Items.Item_type.speed_potion);
-        temp_pot.Find("potion_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.num_speed_pot.ToString());
-        temp_pot.gameObject.SetActive(true);
+        day_prog_bar.localScale = (float)Player.current_money / Player.goal_money <= 1 ? new Vector3(1, (float)Player.current_money / Player.goal_money) : new Vector3(1, 1);
+        day_prog_container.Find("progress").Find("current").GetComponent<TextMeshProUGUI>().SetText(Player.current_money.ToString()+" $");
+        day_prog_container.Find("progress").Find("goal").GetComponent<TextMeshProUGUI>().SetText(Player.goal_money.ToString()+" $");
+        time_container.Find("time").GetComponent<TextMeshProUGUI>().SetText(Mathf.Round(Player.remaining_time).ToString());
+        dynamite_container.Find("quantity").GetComponent<TextMeshProUGUI>().SetText(Player.nr_of_dynamite.ToString());
     }
-    private void update_potions()
-    {
-        if (last_hp_pot != Player.num_health_pot)
-        {
-            pot_container.Find("hp_potion").Find("potion_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.num_health_pot.ToString());
-            last_hp_pot = Player.num_health_pot;
-        }
-        if (last_dmg_pot != Player.num_damage_pot)
-        {
-            pot_container.Find("dmg_potion").Find("potion_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.num_damage_pot.ToString());
-            last_dmg_pot = Player.num_damage_pot;
-        }
-        if (last_speed_pot != Player.num_speed_pot)
-        {
-            pot_container.Find("speed_potion").Find("potion_quantity").GetComponent<TextMeshProUGUI>().SetText(Player.num_speed_pot.ToString());
-            last_speed_pot = Player.num_speed_pot;
-        }
-    }
-    public void add_quest(Quest q)
-    {
-        Transform temp_q = Instantiate(quest_template, quest_container);
-        temp_q.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -50+Player.nr_of_quests*-100);
-        temp_q.name = q.quest_title;
-        temp_q.Find("quest_description").GetComponent<TextMeshProUGUI>().SetText(q.quest_description);
-        temp_q.Find("quest_counter").gameObject.SetActive(q.is_counter);
-        switch(q.status)
-        {
-            case Quest.quest_status.available:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = available;
-                break;
-            case Quest.quest_status.in_progress:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = in_progress;
-                break;
-            case Quest.quest_status.completed:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = completed;
-                break;
-            default:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = available;
-                break;
-        }
-        temp_q.gameObject.SetActive(true);
-    }
-    public void update_quest_status(Quest q)
-    {
-        Transform temp_q = quest_container.Find(q.quest_title);
-        switch (q.status)
-        {
-            case Quest.quest_status.available:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = available;
-                break;
-            case Quest.quest_status.in_progress:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = in_progress;
-                break;
-            case Quest.quest_status.completed:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = completed;
-                break;
-            default:
-                temp_q.Find("quest_icon").GetComponent<Image>().sprite = available;
-                break;
-        }
-    }
-    public void complete_quest(string q)
-    {
-        Transform temp_q = quest_container.Find(q);
-        if (temp_q != null)
-        {
-            temp_q.Find("quest_icon").GetComponent<Image>().sprite = completed;
-            temp_q.gameObject.SetActive(false);
-        }
-    }*/
+
 }

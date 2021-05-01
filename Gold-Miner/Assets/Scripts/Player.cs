@@ -19,7 +19,22 @@ public class Player : MonoBehaviour
     public float angle_speed = 120;
     public float reach_speed = 5;
     private LineRenderer rope;
-    private Transform claw; 
+    private Transform claw;
+    //player related
+    public static float player_strength = 1;
+    public static float stone_knowledge = 1;
+    public static float gem_affinity = 1;
+    //level related
+    public static int current_day=1;
+    public static int current_level=1;
+    public static float remaining_time=1;
+    public static int goal_money, current_money, nr_of_dynamite;
+    private level_manager lvl;
+
+    //time
+    public static bool in_game = true;
+
+    private float start_time=0;
     /*
     public bool isAlive;
     bool is_invincible;
@@ -126,6 +141,11 @@ public class Player : MonoBehaviour
          current_damage = initial_damage;
          armor_level = 0;
          loadPlayer();*/
+        current_money = 0;
+        nr_of_dynamite = 0;
+
+        load_stats();
+
         grabbed_object = null;
         offset_to_grabbed_object = new Vector3(0,0);
         rope = transform.Find("rope").GetComponent<LineRenderer>();
@@ -140,82 +160,159 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (grabbed_object!=null) 
+        if (in_game)
         {
-            reach_min_to_max = false;
-            swinging = false;
-            current_reach -= (reach_speed/1) * Time.deltaTime;//change to percent
-            if (current_reach <= min_reach)
+            remaining_time = remaining_time - Time.deltaTime < 0 ? 0 : remaining_time - Time.deltaTime;
+            if (remaining_time > 0)
             {
-                reach_min_to_max = true;
-                current_reach = min_reach;
-                swinging = true;
-                Destroy(grabbed_object.gameObject);
-                grabbed_object = null;
-            }
-        }
-        else
-        {
-            if (swinging)
-            {
-                if (angle_min_to_max)//direction is min angle to max angle
+                if (grabbed_object != null) //pulling back an object
                 {
-                    current_angle += angle_speed * Time.deltaTime;
-                    claw.Rotate(0, 0, angle_speed * Time.deltaTime);
-                    if (current_angle >= max_angle)
+                    if(Input.GetKeyDown(KeyCode.Mouse1))
                     {
-                        angle_min_to_max = false;
-                        current_angle = max_angle;
+                        if (nr_of_dynamite > 0)
+                        {
+                            nr_of_dynamite--;
+                            grabbed_object.GetComponent<grabbed_object>().explode();
+                            grabbed_object = null;
+                            GameObject.Find("level_manager").GetComponent<level_manager>().decrease_loot(current_day);
+                            reach_min_to_max = true;
+                            current_reach = min_reach;
+                            swinging = true;
+                            return;
+                        }
                     }
-                }
-                else
-                {
-                    current_angle -= angle_speed * Time.deltaTime;
-                    claw.Rotate(0, 0, -angle_speed * Time.deltaTime);
-                    if (current_angle <= min_angle)
-                    {
-                        angle_min_to_max = true;
-                        current_angle = min_angle;
-                    }
-                }
-                transform.Find("crane").GetComponent<Animator>().SetBool("active", false);
-                transform.Find("character").GetComponent<Animator>().SetBool("active", false);
-                if (Input.GetKeyDown(KeyCode.Mouse0))
-                {
+                    reach_min_to_max = false;
                     swinging = false;
-                    transform.Find("crane").GetComponent<Animator>().SetBool("active", true);
-                    transform.Find("character").GetComponent<Animator>().SetBool("active", true);
-                }
-            }
-            else
-            {
-                //if not swinging then reaching
-                if (reach_min_to_max)//direction is min angle to max angle
-                {
-                    current_reach += reach_speed * Time.deltaTime;
-                    if (current_reach >= max_reach)
-                    {
-                        reach_min_to_max = false;
-                        current_reach = max_reach;
-                    }
-                }
-                else
-                {
-                    current_reach -= reach_speed * Time.deltaTime;
+                    current_reach -= (player_strength / grabbed_object.GetComponent<grabbed_object>().get_weight()) * reach_speed * Time.deltaTime;//change to percent
                     if (current_reach <= min_reach)
                     {
                         reach_min_to_max = true;
                         current_reach = min_reach;
                         swinging = true;
+                        //reward player
+                        current_money += grabbed_object.GetComponent<grabbed_object>().get_price(stone_knowledge,gem_affinity);
+                        Destroy(grabbed_object.gameObject);
+                        grabbed_object = null;
+                        GameObject.Find("level_manager").GetComponent<level_manager>().decrease_loot(current_day);
                     }
                 }
+                else
+                {
+                    if (swinging)
+                    {
+                        if (angle_min_to_max)//direction is min angle to max angle
+                        {
+                            current_angle += angle_speed * Time.deltaTime;
+                            claw.Rotate(0, 0, angle_speed * Time.deltaTime);
+                            if (current_angle >= max_angle)
+                            {
+                                angle_min_to_max = false;
+                                current_angle = max_angle;
+                            }
+                        }
+                        else
+                        {
+                            current_angle -= angle_speed * Time.deltaTime;
+                            claw.Rotate(0, 0, -angle_speed * Time.deltaTime);
+                            if (current_angle <= min_angle)
+                            {
+                                angle_min_to_max = true;
+                                current_angle = min_angle;
+                            }
+                        }
+                        transform.Find("crane").GetComponent<Animator>().SetBool("active", false);
+                        transform.Find("character").GetComponent<Animator>().SetBool("active", false);
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            swinging = false;
+                            transform.Find("crane").GetComponent<Animator>().SetBool("active", true);
+                            transform.Find("character").GetComponent<Animator>().SetBool("active", true);
+                        }
+                    }
+                    else
+                    {
+                        //if not swinging then reaching
+                        if (reach_min_to_max)//direction is min angle to max angle
+                        {
+                            current_reach += reach_speed * Time.deltaTime;
+                            if (current_reach >= max_reach)
+                            {
+                                reach_min_to_max = false;
+                                current_reach = max_reach;
+                            }
+                        }
+                        else
+                        {
+                            current_reach -= reach_speed * Time.deltaTime;
+                            if (current_reach <= min_reach)
+                            {
+                                reach_min_to_max = true;
+                                current_reach = min_reach;
+                                swinging = true;
+                            }
+                        }
 
+                    }
+                }
+                rope.SetPosition(1, calc_position(rope.GetPosition(0), current_angle, current_reach));
+                claw.position = calc_position(rope.GetPosition(0), current_angle, current_reach);
+                if (grabbed_object != null) grabbed_object.position = calc_position(rope.GetPosition(0), current_angle, current_reach) + offset_to_grabbed_object;
             }
+            else end_of_day();
         }
-        rope.SetPosition(1, calc_position(rope.GetPosition(0), current_angle,current_reach));
-        claw.position = calc_position(rope.GetPosition(0), current_angle, current_reach);
-        if(grabbed_object!=null) grabbed_object.position = calc_position(rope.GetPosition(0), current_angle, current_reach)+offset_to_grabbed_object;
     }
+    public static void end_of_day()
+    {
+        in_game = false;
+        if (current_money >= goal_money)
+        {
+            //save player
+            shop.open_shop = true;
+        }
+        else
+        {
+
+        }
+    }
+    public void start_next_day()
+    {
+        GameObject.Find("level_manager").GetComponent<level_manager>().next_day();
+        load_stats();
+        in_game = true;
+    }
+    public void load_stats()
+    {
+        lvl = GameObject.Find("level_manager").GetComponent<level_manager>();
+        current_level = lvl != null ? lvl.get_level() : 1;
+        current_day = lvl != null ? lvl.get_day() : 1;
+        goal_money = lvl != null ? lvl.get_goal(current_day) : 999;
+        remaining_time = lvl != null ? lvl.get_time(current_day) : 60;
+    }
+    public static void consume_strength_potion()
+    {
+        player_strength *= 2;
+    }
+    public static void reset_strength()
+    {
+        player_strength = 1;
+    }
+    public static void read_stone_book()
+    {
+        stone_knowledge *= 5;
+    }
+    public static void reset_stone_knowledge()
+    {
+        stone_knowledge = 1;
+    }
+    public static void refine_gems()
+    {
+        gem_affinity *= 1.5f;
+    }
+    public static void reset_gem_affinity()
+    {
+        gem_affinity = 1;
+    }
+
     /*
     public  void spendCoins(int amount)
     {
