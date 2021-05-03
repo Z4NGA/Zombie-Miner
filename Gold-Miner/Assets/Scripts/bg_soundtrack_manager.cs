@@ -5,8 +5,6 @@ using UnityEngine;
 public class bg_soundtrack_manager : MonoBehaviour
 {
     
-   /*
-    
     private AudioSource bg_soundtrack; 
 
     private void Awake()
@@ -27,5 +25,5 @@ public class bg_soundtrack_manager : MonoBehaviour
     {
         soundEngine.play_sound_with_volume(soundEngine.sound_type.click,0.5f);
     }
-   */
+   
 }

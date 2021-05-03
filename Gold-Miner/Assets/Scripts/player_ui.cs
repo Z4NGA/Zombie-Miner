@@ -35,12 +35,7 @@ public class player_ui : MonoBehaviour
         day4_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("4");
         day5_frame = level_prog_container.Find("bar").Find("foreground").Find("fill").Find("5");
         day5_bg = level_prog_container.Find("bar").Find("background").Find("fill").Find("5");
-        day1_frame.gameObject.SetActive(false); day1_bg.gameObject.SetActive(false);
-        day2_frame.gameObject.SetActive(false); day2_bg.gameObject.SetActive(false);
-        day3_frame.gameObject.SetActive(false); day3_bg.gameObject.SetActive(false);
-        day4_frame.gameObject.SetActive(false); day4_bg.gameObject.SetActive(false);
-        day5_frame.gameObject.SetActive(false); day5_bg.gameObject.SetActive(false);
-
+        display_level_progress(1);
     }
     private void Start()
     {
@@ -53,8 +48,42 @@ public class player_ui : MonoBehaviour
     {
         update_stats();
     }
+    void display_level_progress(int day)
+    {
+        day1_frame.gameObject.SetActive(false); day1_bg.gameObject.SetActive(false);
+        day2_frame.gameObject.SetActive(false); day2_bg.gameObject.SetActive(false);
+        day3_frame.gameObject.SetActive(false); day3_bg.gameObject.SetActive(false);
+        day4_frame.gameObject.SetActive(false); day4_bg.gameObject.SetActive(false);
+        day5_frame.gameObject.SetActive(false); day5_bg.gameObject.SetActive(false);
+
+        if (day >= 1)
+        {
+            day1_frame.gameObject.SetActive(true); day1_bg.gameObject.SetActive(true);
+        }
+        if (day >= 2)
+        {
+            day2_frame.gameObject.SetActive(true); day2_bg.gameObject.SetActive(true);
+        }
+        if (day >= 3)
+        {
+            day3_frame.gameObject.SetActive(true); day3_bg.gameObject.SetActive(true);
+        }
+        if (day >= 4)
+        {
+            day4_frame.gameObject.SetActive(true); day4_bg.gameObject.SetActive(true);
+        }
+        if (day >= 5)
+        {
+            day5_frame.gameObject.SetActive(true); day5_bg.gameObject.SetActive(true);
+        }
+    }
     void update_stats()
     {
+        if (last_day != Player.current_day)
+        {
+            last_day = Player.current_day;
+            display_level_progress(last_day);
+        }
         //progress bar and positions update
         float prog = (float)Player.current_money / Player.goal_money ;
         day_prog_bar.localScale = prog <= 1 ? new Vector3(1, prog) : new Vector3(1, 1);

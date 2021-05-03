@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8421098772696863522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3549117457735884067}
+  - component: {fileID: 882352736499738501}
+  m_Layer: 0
+  m_Name: soundAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3549117457735884067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8421098772696863522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.31824443, y: -1.4815568, z: 204.89413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882352736499738501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8421098772696863522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325356db05ffe6f4db2c254dde8ef3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 8300000, guid: 2c1eabd4f6279df4581d3c8e065d9fad, type: 3}
+  pull_crane: {fileID: 8300000, guid: bcfe08b7c1392a04ab4f2ed17f3ed2d9, type: 3}
+  push_crane: {fileID: 8300000, guid: b44adff4300b64c47931fcfbfc5e5469, type: 3}
+  energy_explosion: {fileID: 8300000, guid: a28d35e21b0a49a4f8a848d08a98ed7a, type: 3}
+  fireball_explosion: {fileID: 8300000, guid: 3fffca9c204e42a469f430f71b386b78, type: 3}
+  buy: {fileID: 8300000, guid: 5b24425ac2cae2c44b554d6972a25c25, type: 3}
+  sell: {fileID: 8300000, guid: d0087424a3c60cc45a5b45ac2f114d55, type: 3}
+  level1_bg: {fileID: 8300000, guid: 0e06dac55eeaeb645b3346959d1afce0, type: 3}
+  level2_bg: {fileID: 8300000, guid: ff6408e22a3a0cc4096d336fab8608d0, type: 3}
+  level3_bg: {fileID: 8300000, guid: 61ffe8cdac583064f9b093bdf76dd2ef, type: 3}
+  level4_bg: {fileID: 8300000, guid: 6d61c4b08dad7ca41a9006130982cda0, type: 3}
+  level5_bg: {fileID: 8300000, guid: 2fbb948a6969fc745be129d80d88fd30, type: 3}
