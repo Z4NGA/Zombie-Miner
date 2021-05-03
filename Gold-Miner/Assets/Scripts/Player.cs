@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
     //time
     public static bool in_game = true;
-
+    private bool play_countdown = false;
     private float start_time=0;
     /*
     public bool isAlive;
@@ -163,6 +163,12 @@ public class Player : MonoBehaviour
         if (in_game)
         {
             remaining_time = remaining_time - Time.deltaTime < 0 ? 0 : remaining_time - Time.deltaTime;
+            if (remaining_time > 10) play_countdown = false;
+            if((remaining_time<=10)&&(play_countdown==false))
+            {
+                play_countdown = true;
+                soundEngine.play_sound_timed(soundEngine.sound_type.countdown,10);
+            }
             if (remaining_time > 0)
             {
                 if (grabbed_object != null) //pulling back an object
@@ -173,6 +179,7 @@ public class Player : MonoBehaviour
                         {
                             nr_of_dynamite--;
                             grabbed_object.GetComponent<grabbed_object>().explode();
+                            soundEngine.play_sound(soundEngine.sound_type.energy_explosion);
                             grabbed_object = null;
                             GameObject.Find("level_manager").GetComponent<level_manager>().decrease_loot(current_day);
                             reach_min_to_max = true;
@@ -191,6 +198,7 @@ public class Player : MonoBehaviour
                         swinging = true;
                         //reward player
                         current_money += grabbed_object.GetComponent<grabbed_object>().get_price(stone_knowledge,gem_affinity);
+                        soundEngine.play_sound(soundEngine.sound_type.sell);
                         Destroy(grabbed_object.gameObject);
                         grabbed_object = null;
                         GameObject.Find("level_manager").GetComponent<level_manager>().decrease_loot(current_day);
@@ -227,6 +235,7 @@ public class Player : MonoBehaviour
                             swinging = false;
                             transform.Find("crane").GetComponent<Animator>().SetBool("active", true);
                             transform.Find("character").GetComponent<Animator>().SetBool("active", true);
+                            soundEngine.play_sound_with_volume(soundEngine.sound_type.push_crane,0.7f);
                         }
                     }
                     else

@@ -15,6 +15,7 @@ public class soundAssets : MonoBehaviour
     }
     //UI sounds
     public AudioClip click;
+    public AudioClip countdown;
     //player sounds
     public AudioClip pull_crane;
     public AudioClip push_crane;

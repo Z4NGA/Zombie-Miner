@@ -62,6 +62,7 @@ public class shop_ui : MonoBehaviour
             case "dynamite":
                 if (Player.current_money > 200)
                 {
+                    soundEngine.play_sound(soundEngine.sound_type.buy);
                     Player.current_money -= 200;
                     Player.nr_of_dynamite++;
                     transform.Find("items_day_" + Player.current_day).Find("dynamite").gameObject.SetActive(false);
@@ -71,6 +72,7 @@ public class shop_ui : MonoBehaviour
             case "strength_potion":
                 if (Player.current_money > 300)
                 {
+                    soundEngine.play_sound(soundEngine.sound_type.buy);
                     Player.current_money -= 300;
                     Player.consume_strength_potion();
                     transform.Find("items_day_" + Player.current_day).Find("strength_potion").gameObject.SetActive(false);
@@ -80,6 +82,7 @@ public class shop_ui : MonoBehaviour
             case "stone_book":
                 if (Player.current_money > 168)
                 {
+                    soundEngine.play_sound(soundEngine.sound_type.buy);
                     Player.current_money -= 168;
                     Player.read_stone_book();
                     transform.Find("items_day_" + Player.current_day).Find("stone_book").gameObject.SetActive(false);
@@ -89,6 +92,7 @@ public class shop_ui : MonoBehaviour
             case "gem_liquid":
                 if (Player.current_money > 537)
                 {
+                    soundEngine.play_sound(soundEngine.sound_type.buy);
                     Player.current_money -= 537;
                     Player.refine_gems();
                     transform.Find("items_day_" + Player.current_day).Find("gem_liquid").gameObject.SetActive(false);

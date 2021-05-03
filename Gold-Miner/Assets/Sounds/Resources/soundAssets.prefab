@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 8300000, guid: 2c1eabd4f6279df4581d3c8e065d9fad, type: 3}
+  countdown: {fileID: 8300000, guid: ea97316f899969441828253193f4716f, type: 3}
   pull_crane: {fileID: 8300000, guid: bcfe08b7c1392a04ab4f2ed17f3ed2d9, type: 3}
   push_crane: {fileID: 8300000, guid: b44adff4300b64c47931fcfbfc5e5469, type: 3}
   energy_explosion: {fileID: 8300000, guid: a28d35e21b0a49a4f8a848d08a98ed7a, type: 3}

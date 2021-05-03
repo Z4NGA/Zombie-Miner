@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public static class soundEngine 
 {   
-    public static float sfx_volume = 0.1f;
-    public static float bg_volume = 0.5f;
+    public static float sfx_volume = 0.3f;
+    public static float bg_volume = 0.8f;
     //private static float gui_volume = 0.5f;
    
     public enum sound_type
     {
             //ui
         click
-            //player
+        , countdown
+        //player
         , pull_crane
         , push_crane
             //attacks effects
@@ -36,6 +37,8 @@ public static class soundEngine
             //ui
             case sound_type.click:
                 return soundAssets.instance.click;
+            case sound_type.countdown:
+                return soundAssets.instance.countdown;
             //player
             case sound_type.pull_crane:
                 return soundAssets.instance.pull_crane;
