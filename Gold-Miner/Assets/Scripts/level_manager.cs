@@ -32,7 +32,7 @@ public class level_manager : MonoBehaviour
     }
     public void next_day()
     {
-        current_day = current_day + 1 <= 5 ? current_day + 1 : 1;
+        current_day = current_day + 1;
         if (current_day > 5) next_level();
         else
         {
@@ -43,7 +43,9 @@ public class level_manager : MonoBehaviour
     }
     public void next_level()
     {
-
+        current_day = 1;
+        level++;
+        GameObject.Find("GameEngine").GetComponent<GameEngine>().nextLevel();
     }
     public void load_day_objects(int day)
     {

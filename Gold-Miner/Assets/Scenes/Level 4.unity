@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 9044990}
   - component: {fileID: 9044989}
   m_Layer: 0
-  m_Name: power ore_4 (3)
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,11 +247,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!60 &9044990
 PolygonCollider2D:
@@ -269,8 +269,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -278,34 +278,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &9044991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -345,7 +340,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -727,7 +722,7 @@ GameObject:
   - component: {fileID: 54895475}
   - component: {fileID: 54895474}
   m_Layer: 0
-  m_Name: power ore_1
+  m_Name: gold ore 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,11 +754,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 2.5
-  price: 370
+  weight: 3
+  price: 425
   description: mm
 --- !u!60 &54895475
 PolygonCollider2D:
@@ -781,8 +776,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49414912, y: 0.97310454}
-    oldSize: {x: 1.65, y: 1.51}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.63, y: 1.51}
     newSize: {x: 1.65, y: 1.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -790,36 +785,32 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5746539, y: -1.3093878}
-      - {x: 0.6546539, y: -1.2393878}
-      - {x: 0.7646539, y: -0.90938777}
-      - {x: 0.8346539, y: -0.6393878}
-      - {x: 0.8346539, y: -0.4993878}
-      - {x: 0.7946539, y: -0.4693878}
-      - {x: 0.7346539, y: -0.41938782}
-      - {x: 0.5146539, y: -0.28938782}
-      - {x: 0.38465393, y: -0.31938782}
-      - {x: 0.2746539, y: -0.3393878}
-      - {x: 0.17465393, y: -0.20938781}
-      - {x: 0.16465393, y: -0.069387816}
-      - {x: 0.104653925, y: 0.040612184}
-      - {x: -0.11534607, y: 0.040612184}
-      - {x: -0.29534605, y: -0.039387815}
-      - {x: -0.38534606, y: -0.09938782}
-      - {x: -0.725346, y: -0.3293878}
-      - {x: -0.81534606, y: -0.4393878}
-      - {x: -0.81534606, y: -0.6393878}
-      - {x: -0.7953461, y: -0.7293878}
-      - {x: -0.725346, y: -0.9293878}
-      - {x: -0.70534605, y: -0.9793878}
-      - {x: -0.62534606, y: -1.1493878}
-      - {x: -0.5553461, y: -1.2593877}
-      - {x: -0.48534605, y: -1.3493878}
-      - {x: -0.40534607, y: -1.4293878}
-      - {x: -0.34534606, y: -1.4693878}
-      - {x: 0.04465393, y: -1.4693878}
-      - {x: 0.17465393, y: -1.4393878}
-      - {x: 0.4046539, y: -1.3693877}
+    - - {x: 0.73499995, y: -0.24499999}
+      - {x: 0.815, y: 0.035}
+      - {x: 0.815, y: 0.225}
+      - {x: 0.645, y: 0.345}
+      - {x: 0.525, y: 0.385}
+      - {x: 0.475, y: 0.405}
+      - {x: 0.445, y: 0.415}
+      - {x: 0.285, y: 0.355}
+      - {x: 0.185, y: 0.445}
+      - {x: 0.13499999, y: 0.695}
+      - {x: 0.065, y: 0.755}
+      - {x: -0.095, y: 0.755}
+      - {x: -0.16499999, y: 0.72499996}
+      - {x: -0.405, y: 0.60499996}
+      - {x: -0.49499997, y: 0.545}
+      - {x: -0.655, y: 0.435}
+      - {x: -0.815, y: 0.285}
+      - {x: -0.815, y: 0.044999998}
+      - {x: -0.78499997, y: -0.095}
+      - {x: -0.645, y: -0.42499998}
+      - {x: -0.565, y: -0.555}
+      - {x: -0.375, y: -0.755}
+      - {x: 0.035, y: -0.755}
+      - {x: 0.265, y: -0.705}
+      - {x: 0.585, y: -0.575}
+      - {x: 0.655, y: -0.435}
 --- !u!212 &54895476
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -859,8 +850,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3907543541546798770, guid: d735ebe5575b8e441a36558840d9388f,
-    type: 3}
+  m_Sprite: {fileID: 782734933048093391, guid: a54cd31e290bdce459f884b923dc9451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1069,7 +1059,7 @@ GameObject:
   - component: {fileID: 112596304}
   - component: {fileID: 112596303}
   m_Layer: 0
-  m_Name: power ore_3 (1)
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1101,11 +1091,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!60 &112596304
 PolygonCollider2D:
@@ -1123,8 +1113,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1132,23 +1122,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &112596305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1188,7 +1176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1502,7 +1490,7 @@ GameObject:
   - component: {fileID: 195323579}
   - component: {fileID: 195323578}
   m_Layer: 0
-  m_Name: power ore_3 (1)
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1534,11 +1522,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!60 &195323579
 PolygonCollider2D:
@@ -1556,8 +1544,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1565,23 +1553,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &195323580
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1621,7 +1607,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2556,7 +2542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298694220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0092427, y: -0.3301777, z: 199.91585}
+  m_LocalPosition: {x: -1.31, y: -0.55, z: 199.91585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 54895473}
@@ -2616,7 +2602,7 @@ GameObject:
   - component: {fileID: 302680383}
   - component: {fileID: 302680382}
   m_Layer: 0
-  m_Name: Sapphire Gem04 (1)
+  m_Name: topaz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2661,20 +2647,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.007168889, y: 0.23657799}
-      - {x: -0.09684333, y: 0.29737335}
-      - {x: -0.24106038, y: 0.29421693}
-      - {x: -0.27106038, y: 0.22}
-      - {x: -0.28684345, y: 0.06419255}
-      - {x: -0.14421692, y: -0.19790384}
-      - {x: 0.028939733, y: -0.30053002}
-      - {x: 0.099999994, y: -0.31}
-      - {x: 0.18790384, y: -0.26421717}
-      - {x: 0.29, y: -0.12}
-      - {x: 0.28398728, y: 0.06629872}
-      - {x: 0.2268677, y: 0.14525282}
-      - {x: 0.16215622, y: 0.19249606}
-      - {x: 0.06371105, y: 0.14689207}
+    - - {x: 0.13, y: 0.22}
+      - {x: -0.08, y: 0.32}
+      - {x: -0.26999998, y: 0.32}
+      - {x: -0.28, y: 0.31}
+      - {x: -0.29, y: 0.22}
+      - {x: -0.29, y: 0}
+      - {x: -0.17999999, y: -0.17999999}
+      - {x: -0.01, y: -0.32}
+      - {x: 0.12, y: -0.32}
+      - {x: 0.22, y: -0.29}
+      - {x: 0.31, y: -0.14}
+      - {x: 0.31, y: 0.049999997}
+      - {x: 0.26999998, y: 0.19999999}
 --- !u!114 &302680383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2687,11 +2672,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 3738600766337405570, guid: a348a80a94ce6f343849c21405774843,
+  particule: {fileID: 3738600766337405570, guid: 8fa324d20cac73f47a2a25e0d44ecd33,
     type: 3}
   type: 2
-  weight: 0.5
-  price: 800
+  weight: 1
+  price: 1000
   description: saphphire
 --- !u!212 &302680384
 SpriteRenderer:
@@ -2732,7 +2717,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5144f69a442907c42aad40fdc6de097b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 228e68ffb8d3e0a47a3c353743fb14fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2767,7 +2752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337117375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0092427, y: -0.3301777, z: 199.91585}
+  m_LocalPosition: {x: 0.14, y: -0.05, z: 199.91585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1980706382}
@@ -3129,7 +3114,7 @@ GameObject:
   - component: {fileID: 375681426}
   - component: {fileID: 375681425}
   m_Layer: 0
-  m_Name: power ore_3 (1)
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3161,11 +3146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!60 &375681426
 PolygonCollider2D:
@@ -3183,8 +3168,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3192,23 +3177,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &375681427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3248,7 +3231,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3439,7 +3422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409739337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0092427, y: -0.3301777, z: 199.91585}
+  m_LocalPosition: {x: -1.0092427, y: -1.15, z: 199.91585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1959269191}
@@ -4282,7 +4265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514444552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0092427, y: -0.3301777, z: 199.91585}
+  m_LocalPosition: {x: -1.18, y: -0.16, z: 199.91585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1111461387}
@@ -5703,7 +5686,7 @@ GameObject:
   - component: {fileID: 656810807}
   - component: {fileID: 656810806}
   m_Layer: 0
-  m_Name: power ore_3
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5735,11 +5718,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!60 &656810807
 PolygonCollider2D:
@@ -5757,8 +5740,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5766,23 +5749,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &656810808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5822,7 +5803,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6339,7 +6320,7 @@ GameObject:
   - component: {fileID: 717101181}
   - component: {fileID: 717101184}
   m_Layer: 0
-  m_Name: power ore_4
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6361,8 +6342,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6370,34 +6351,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &717101182
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6437,7 +6413,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6475,11 +6451,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!1 &745251489
 GameObject:
@@ -6738,7 +6714,7 @@ GameObject:
   - component: {fileID: 751968799}
   - component: {fileID: 751968798}
   m_Layer: 0
-  m_Name: power ore_4
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6770,11 +6746,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!60 &751968799
 PolygonCollider2D:
@@ -6792,8 +6768,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6801,34 +6777,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &751968800
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6868,7 +6839,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7789,7 +7760,7 @@ GameObject:
   - component: {fileID: 872866013}
   - component: {fileID: 872866012}
   m_Layer: 0
-  m_Name: power ore_3
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7821,11 +7792,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!60 &872866013
 PolygonCollider2D:
@@ -7843,8 +7814,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7852,23 +7823,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &872866014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7908,7 +7877,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8164,7 +8133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899927033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9007574, y: -2.2698221, z: -199.91585}
+  m_LocalPosition: {x: -0.99, y: -1.19, z: -199.91585}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 298694221}
@@ -9305,7 +9274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978165831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.25, y: -2.15, z: -199.91585}
+  m_LocalPosition: {x: -2.49, y: -1.39, z: -199.91585}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1651469421}
@@ -10205,7 +10174,7 @@ GameObject:
   - component: {fileID: 1111461389}
   - component: {fileID: 1111461388}
   m_Layer: 0
-  m_Name: power ore_1
+  m_Name: gold ore 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10237,11 +10206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 2.5
-  price: 370
+  weight: 3
+  price: 425
   description: mm
 --- !u!60 &1111461389
 PolygonCollider2D:
@@ -10259,8 +10228,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49414912, y: 0.97310454}
-    oldSize: {x: 1.65, y: 1.51}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.63, y: 1.51}
     newSize: {x: 1.65, y: 1.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10268,36 +10237,32 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5746539, y: -1.3093878}
-      - {x: 0.6546539, y: -1.2393878}
-      - {x: 0.7646539, y: -0.90938777}
-      - {x: 0.8346539, y: -0.6393878}
-      - {x: 0.8346539, y: -0.4993878}
-      - {x: 0.7946539, y: -0.4693878}
-      - {x: 0.7346539, y: -0.41938782}
-      - {x: 0.5146539, y: -0.28938782}
-      - {x: 0.38465393, y: -0.31938782}
-      - {x: 0.2746539, y: -0.3393878}
-      - {x: 0.17465393, y: -0.20938781}
-      - {x: 0.16465393, y: -0.069387816}
-      - {x: 0.104653925, y: 0.040612184}
-      - {x: -0.11534607, y: 0.040612184}
-      - {x: -0.29534605, y: -0.039387815}
-      - {x: -0.38534606, y: -0.09938782}
-      - {x: -0.725346, y: -0.3293878}
-      - {x: -0.81534606, y: -0.4393878}
-      - {x: -0.81534606, y: -0.6393878}
-      - {x: -0.7953461, y: -0.7293878}
-      - {x: -0.725346, y: -0.9293878}
-      - {x: -0.70534605, y: -0.9793878}
-      - {x: -0.62534606, y: -1.1493878}
-      - {x: -0.5553461, y: -1.2593877}
-      - {x: -0.48534605, y: -1.3493878}
-      - {x: -0.40534607, y: -1.4293878}
-      - {x: -0.34534606, y: -1.4693878}
-      - {x: 0.04465393, y: -1.4693878}
-      - {x: 0.17465393, y: -1.4393878}
-      - {x: 0.4046539, y: -1.3693877}
+    - - {x: 0.73499995, y: -0.24499999}
+      - {x: 0.815, y: 0.035}
+      - {x: 0.815, y: 0.225}
+      - {x: 0.645, y: 0.345}
+      - {x: 0.525, y: 0.385}
+      - {x: 0.475, y: 0.405}
+      - {x: 0.445, y: 0.415}
+      - {x: 0.285, y: 0.355}
+      - {x: 0.185, y: 0.445}
+      - {x: 0.13499999, y: 0.695}
+      - {x: 0.065, y: 0.755}
+      - {x: -0.095, y: 0.755}
+      - {x: -0.16499999, y: 0.72499996}
+      - {x: -0.405, y: 0.60499996}
+      - {x: -0.49499997, y: 0.545}
+      - {x: -0.655, y: 0.435}
+      - {x: -0.815, y: 0.285}
+      - {x: -0.815, y: 0.044999998}
+      - {x: -0.78499997, y: -0.095}
+      - {x: -0.645, y: -0.42499998}
+      - {x: -0.565, y: -0.555}
+      - {x: -0.375, y: -0.755}
+      - {x: 0.035, y: -0.755}
+      - {x: 0.265, y: -0.705}
+      - {x: 0.585, y: -0.575}
+      - {x: 0.655, y: -0.435}
 --- !u!212 &1111461390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10337,8 +10302,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3907543541546798770, guid: d735ebe5575b8e441a36558840d9388f,
-    type: 3}
+  m_Sprite: {fileID: 782734933048093391, guid: a54cd31e290bdce459f884b923dc9451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10822,7 +10786,7 @@ GameObject:
   - component: {fileID: 1135590087}
   - component: {fileID: 1135590086}
   m_Layer: 0
-  m_Name: power ore_4 (1)
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10854,11 +10818,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!60 &1135590087
 PolygonCollider2D:
@@ -10876,8 +10840,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10885,34 +10849,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &1135590088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10952,7 +10911,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11863,7 +11822,7 @@ GameObject:
   - component: {fileID: 1235725192}
   - component: {fileID: 1235725191}
   m_Layer: 0
-  m_Name: Sapphire Gem04
+  m_Name: topaz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11908,20 +11867,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.007168889, y: 0.23657799}
-      - {x: -0.09684333, y: 0.29737335}
-      - {x: -0.24106038, y: 0.29421693}
-      - {x: -0.27106038, y: 0.22}
-      - {x: -0.28684345, y: 0.06419255}
-      - {x: -0.14421692, y: -0.19790384}
-      - {x: 0.028939733, y: -0.30053002}
-      - {x: 0.099999994, y: -0.31}
-      - {x: 0.18790384, y: -0.26421717}
-      - {x: 0.29, y: -0.12}
-      - {x: 0.28398728, y: 0.06629872}
-      - {x: 0.2268677, y: 0.14525282}
-      - {x: 0.16215622, y: 0.19249606}
-      - {x: 0.06371105, y: 0.14689207}
+    - - {x: 0.13, y: 0.22}
+      - {x: -0.08, y: 0.32}
+      - {x: -0.26999998, y: 0.32}
+      - {x: -0.28, y: 0.31}
+      - {x: -0.29, y: 0.22}
+      - {x: -0.29, y: 0}
+      - {x: -0.17999999, y: -0.17999999}
+      - {x: -0.01, y: -0.32}
+      - {x: 0.12, y: -0.32}
+      - {x: 0.22, y: -0.29}
+      - {x: 0.31, y: -0.14}
+      - {x: 0.31, y: 0.049999997}
+      - {x: 0.26999998, y: 0.19999999}
 --- !u!114 &1235725192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11934,11 +11892,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 3738600766337405570, guid: a348a80a94ce6f343849c21405774843,
+  particule: {fileID: 3738600766337405570, guid: 8fa324d20cac73f47a2a25e0d44ecd33,
     type: 3}
   type: 2
-  weight: 0.5
-  price: 800
+  weight: 1
+  price: 1000
   description: saphphire
 --- !u!212 &1235725193
 SpriteRenderer:
@@ -11979,7 +11937,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5144f69a442907c42aad40fdc6de097b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 228e68ffb8d3e0a47a3c353743fb14fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12151,7 +12109,7 @@ GameObject:
   - component: {fileID: 1314466483}
   - component: {fileID: 1314466482}
   m_Layer: 0
-  m_Name: power ore_1
+  m_Name: gold ore 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12183,11 +12141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 2.5
-  price: 422
+  weight: 3
+  price: 425
   description: mm
 --- !u!60 &1314466483
 PolygonCollider2D:
@@ -12205,8 +12163,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49414912, y: 0.97310454}
-    oldSize: {x: 1.65, y: 1.51}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.63, y: 1.51}
     newSize: {x: 1.65, y: 1.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12214,36 +12172,32 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5746539, y: -1.3093878}
-      - {x: 0.6546539, y: -1.2393878}
-      - {x: 0.7646539, y: -0.90938777}
-      - {x: 0.8346539, y: -0.6393878}
-      - {x: 0.8346539, y: -0.4993878}
-      - {x: 0.7946539, y: -0.4693878}
-      - {x: 0.7346539, y: -0.41938782}
-      - {x: 0.5146539, y: -0.28938782}
-      - {x: 0.38465393, y: -0.31938782}
-      - {x: 0.2746539, y: -0.3393878}
-      - {x: 0.17465393, y: -0.20938781}
-      - {x: 0.16465393, y: -0.069387816}
-      - {x: 0.104653925, y: 0.040612184}
-      - {x: -0.11534607, y: 0.040612184}
-      - {x: -0.29534605, y: -0.039387815}
-      - {x: -0.38534606, y: -0.09938782}
-      - {x: -0.725346, y: -0.3293878}
-      - {x: -0.81534606, y: -0.4393878}
-      - {x: -0.81534606, y: -0.6393878}
-      - {x: -0.7953461, y: -0.7293878}
-      - {x: -0.725346, y: -0.9293878}
-      - {x: -0.70534605, y: -0.9793878}
-      - {x: -0.62534606, y: -1.1493878}
-      - {x: -0.5553461, y: -1.2593877}
-      - {x: -0.48534605, y: -1.3493878}
-      - {x: -0.40534607, y: -1.4293878}
-      - {x: -0.34534606, y: -1.4693878}
-      - {x: 0.04465393, y: -1.4693878}
-      - {x: 0.17465393, y: -1.4393878}
-      - {x: 0.4046539, y: -1.3693877}
+    - - {x: 0.73499995, y: -0.24499999}
+      - {x: 0.815, y: 0.035}
+      - {x: 0.815, y: 0.225}
+      - {x: 0.645, y: 0.345}
+      - {x: 0.525, y: 0.385}
+      - {x: 0.475, y: 0.405}
+      - {x: 0.445, y: 0.415}
+      - {x: 0.285, y: 0.355}
+      - {x: 0.185, y: 0.445}
+      - {x: 0.13499999, y: 0.695}
+      - {x: 0.065, y: 0.755}
+      - {x: -0.095, y: 0.755}
+      - {x: -0.16499999, y: 0.72499996}
+      - {x: -0.405, y: 0.60499996}
+      - {x: -0.49499997, y: 0.545}
+      - {x: -0.655, y: 0.435}
+      - {x: -0.815, y: 0.285}
+      - {x: -0.815, y: 0.044999998}
+      - {x: -0.78499997, y: -0.095}
+      - {x: -0.645, y: -0.42499998}
+      - {x: -0.565, y: -0.555}
+      - {x: -0.375, y: -0.755}
+      - {x: 0.035, y: -0.755}
+      - {x: 0.265, y: -0.705}
+      - {x: 0.585, y: -0.575}
+      - {x: 0.655, y: -0.435}
 --- !u!212 &1314466484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12283,8 +12237,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3907543541546798770, guid: d735ebe5575b8e441a36558840d9388f,
-    type: 3}
+  m_Sprite: {fileID: 782734933048093391, guid: a54cd31e290bdce459f884b923dc9451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12441,7 +12394,7 @@ GameObject:
   - component: {fileID: 1370742503}
   - component: {fileID: 1370742506}
   m_Layer: 0
-  m_Name: power ore_3
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12463,8 +12416,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12472,23 +12425,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &1370742504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12528,7 +12479,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12566,11 +12517,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!1 &1379570628
 GameObject:
@@ -12585,7 +12536,7 @@ GameObject:
   - component: {fileID: 1379570631}
   - component: {fileID: 1379570630}
   m_Layer: 0
-  m_Name: power ore_3
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12617,11 +12568,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!60 &1379570631
 PolygonCollider2D:
@@ -12639,8 +12590,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12648,23 +12599,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &1379570632
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12704,7 +12653,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13771,7 +13720,7 @@ GameObject:
   - component: {fileID: 1516068763}
   - component: {fileID: 1516068762}
   m_Layer: 0
-  m_Name: power ore_4 (2)
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13803,11 +13752,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!60 &1516068763
 PolygonCollider2D:
@@ -13825,8 +13774,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -13834,34 +13783,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &1516068764
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13901,7 +13845,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14801,14 +14745,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ccafbadfea15445b1b88272aae79bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  day_goals: f4010000e2040000d0070000220b0000a00f0000
+  day_goals: 384a0000204e000008520000d859000084670000
   day_times:
-  - 30
+  - 60
   - 45
   - 60
-  - 75
+  - 60
   - 90
-  level: 1
+  level: 4
   current_day: 1
   day_objects:
   - {fileID: 337117375}
@@ -14895,7 +14839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651469420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0092427, y: -0.3301777, z: 199.91585}
+  m_LocalPosition: {x: -0.9, y: -1.09, z: 199.91585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 978165832}
@@ -14919,7 +14863,7 @@ GameObject:
   - component: {fileID: 1651681407}
   - component: {fileID: 1651681406}
   m_Layer: 0
-  m_Name: power ore_4
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14951,11 +14895,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!60 &1651681407
 PolygonCollider2D:
@@ -14973,8 +14917,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14982,34 +14926,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &1651681408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15049,7 +14988,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15163,7 +15102,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0e06dac55eeaeb645b3346959d1afce0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6d61c4b08dad7ca41a9006130982cda0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -15288,7 +15227,7 @@ GameObject:
   - component: {fileID: 1697079685}
   - component: {fileID: 1697079684}
   m_Layer: 0
-  m_Name: power ore_3
+  m_Name: gold ore 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15320,11 +15259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1
-  price: 126
+  weight: 1.3
+  price: 175
   description: xx
 --- !u!60 &1697079685
 PolygonCollider2D:
@@ -15342,8 +15281,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.15, y: 0.86}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
     newSize: {x: 1.15, y: 0.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15351,23 +15290,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.575, y: -0.55}
-      - {x: 0.575, y: -0.29999998}
-      - {x: 0.405, y: -0.089999996}
-      - {x: 0.235, y: 0}
-      - {x: 0.035, y: 0}
-      - {x: -0.095, y: -0.03}
-      - {x: -0.42499998, y: -0.03}
-      - {x: -0.575, y: -0.13}
-      - {x: -0.575, y: -0.39}
-      - {x: -0.565, y: -0.45999998}
-      - {x: -0.465, y: -0.71}
-      - {x: -0.42499998, y: -0.76}
-      - {x: -0.305, y: -0.85999995}
-      - {x: 0.265, y: -0.85999995}
-      - {x: 0.345, y: -0.84999996}
-      - {x: 0.415, y: -0.83}
-      - {x: 0.49499997, y: -0.74}
+    - - {x: 0.57, y: 0.145}
+      - {x: 0.35999998, y: 0.355}
+      - {x: 0.22999999, y: 0.42499998}
+      - {x: -0.01, y: 0.42499998}
+      - {x: -0.089999996, y: 0.405}
+      - {x: -0.45, y: 0.385}
+      - {x: -0.57, y: 0.295}
+      - {x: -0.57, y: 0.044999998}
+      - {x: -0.35999998, y: -0.355}
+      - {x: -0.29, y: -0.415}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.29, y: -0.42499998}
+      - {x: 0.38, y: -0.415}
+      - {x: 0.47, y: -0.345}
+      - {x: 0.57, y: -0.114999995}
 --- !u!212 &1697079686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15407,7 +15344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1071742232504909692, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 5351411901890433816, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16951,7 +16888,7 @@ GameObject:
   - component: {fileID: 1959269193}
   - component: {fileID: 1959269192}
   m_Layer: 0
-  m_Name: power ore_1
+  m_Name: gold ore 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16983,11 +16920,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 2.5
-  price: 370
+  weight: 3
+  price: 425
   description: mm
 --- !u!60 &1959269193
 PolygonCollider2D:
@@ -17005,8 +16942,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49414912, y: 0.97310454}
-    oldSize: {x: 1.65, y: 1.51}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.63, y: 1.51}
     newSize: {x: 1.65, y: 1.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17014,36 +16951,32 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5746539, y: -1.3093878}
-      - {x: 0.6546539, y: -1.2393878}
-      - {x: 0.7646539, y: -0.90938777}
-      - {x: 0.8346539, y: -0.6393878}
-      - {x: 0.8346539, y: -0.4993878}
-      - {x: 0.7946539, y: -0.4693878}
-      - {x: 0.7346539, y: -0.41938782}
-      - {x: 0.5146539, y: -0.28938782}
-      - {x: 0.38465393, y: -0.31938782}
-      - {x: 0.2746539, y: -0.3393878}
-      - {x: 0.17465393, y: -0.20938781}
-      - {x: 0.16465393, y: -0.069387816}
-      - {x: 0.104653925, y: 0.040612184}
-      - {x: -0.11534607, y: 0.040612184}
-      - {x: -0.29534605, y: -0.039387815}
-      - {x: -0.38534606, y: -0.09938782}
-      - {x: -0.725346, y: -0.3293878}
-      - {x: -0.81534606, y: -0.4393878}
-      - {x: -0.81534606, y: -0.6393878}
-      - {x: -0.7953461, y: -0.7293878}
-      - {x: -0.725346, y: -0.9293878}
-      - {x: -0.70534605, y: -0.9793878}
-      - {x: -0.62534606, y: -1.1493878}
-      - {x: -0.5553461, y: -1.2593877}
-      - {x: -0.48534605, y: -1.3493878}
-      - {x: -0.40534607, y: -1.4293878}
-      - {x: -0.34534606, y: -1.4693878}
-      - {x: 0.04465393, y: -1.4693878}
-      - {x: 0.17465393, y: -1.4393878}
-      - {x: 0.4046539, y: -1.3693877}
+    - - {x: 0.73499995, y: -0.24499999}
+      - {x: 0.815, y: 0.035}
+      - {x: 0.815, y: 0.225}
+      - {x: 0.645, y: 0.345}
+      - {x: 0.525, y: 0.385}
+      - {x: 0.475, y: 0.405}
+      - {x: 0.445, y: 0.415}
+      - {x: 0.285, y: 0.355}
+      - {x: 0.185, y: 0.445}
+      - {x: 0.13499999, y: 0.695}
+      - {x: 0.065, y: 0.755}
+      - {x: -0.095, y: 0.755}
+      - {x: -0.16499999, y: 0.72499996}
+      - {x: -0.405, y: 0.60499996}
+      - {x: -0.49499997, y: 0.545}
+      - {x: -0.655, y: 0.435}
+      - {x: -0.815, y: 0.285}
+      - {x: -0.815, y: 0.044999998}
+      - {x: -0.78499997, y: -0.095}
+      - {x: -0.645, y: -0.42499998}
+      - {x: -0.565, y: -0.555}
+      - {x: -0.375, y: -0.755}
+      - {x: 0.035, y: -0.755}
+      - {x: 0.265, y: -0.705}
+      - {x: 0.585, y: -0.575}
+      - {x: 0.655, y: -0.435}
 --- !u!212 &1959269194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17083,8 +17016,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3907543541546798770, guid: d735ebe5575b8e441a36558840d9388f,
-    type: 3}
+  m_Sprite: {fileID: 782734933048093391, guid: a54cd31e290bdce459f884b923dc9451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17189,7 +17121,7 @@ GameObject:
   - component: {fileID: 1964938843}
   - component: {fileID: 1964938842}
   m_Layer: 0
-  m_Name: power ore_4
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17221,11 +17153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!60 &1964938843
 PolygonCollider2D:
@@ -17243,8 +17175,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17252,34 +17184,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &1964938844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17319,7 +17246,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17456,7 +17383,7 @@ GameObject:
   - component: {fileID: 1980706380}
   - component: {fileID: 1980706379}
   m_Layer: 0
-  m_Name: power ore_1
+  m_Name: gold ore 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17474,11 +17401,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 2.5
-  price: 470
+  weight: 3
+  price: 425
   description: mm
 --- !u!60 &1980706380
 PolygonCollider2D:
@@ -17496,8 +17423,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49414912, y: 0.97310454}
-    oldSize: {x: 1.65, y: 1.51}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.63, y: 1.51}
     newSize: {x: 1.65, y: 1.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17505,36 +17432,32 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5746539, y: -1.3093878}
-      - {x: 0.6546539, y: -1.2393878}
-      - {x: 0.7646539, y: -0.90938777}
-      - {x: 0.8346539, y: -0.6393878}
-      - {x: 0.8346539, y: -0.4993878}
-      - {x: 0.7946539, y: -0.4693878}
-      - {x: 0.7346539, y: -0.41938782}
-      - {x: 0.5146539, y: -0.28938782}
-      - {x: 0.38465393, y: -0.31938782}
-      - {x: 0.2746539, y: -0.3393878}
-      - {x: 0.17465393, y: -0.20938781}
-      - {x: 0.16465393, y: -0.069387816}
-      - {x: 0.104653925, y: 0.040612184}
-      - {x: -0.11534607, y: 0.040612184}
-      - {x: -0.29534605, y: -0.039387815}
-      - {x: -0.38534606, y: -0.09938782}
-      - {x: -0.725346, y: -0.3293878}
-      - {x: -0.81534606, y: -0.4393878}
-      - {x: -0.81534606, y: -0.6393878}
-      - {x: -0.7953461, y: -0.7293878}
-      - {x: -0.725346, y: -0.9293878}
-      - {x: -0.70534605, y: -0.9793878}
-      - {x: -0.62534606, y: -1.1493878}
-      - {x: -0.5553461, y: -1.2593877}
-      - {x: -0.48534605, y: -1.3493878}
-      - {x: -0.40534607, y: -1.4293878}
-      - {x: -0.34534606, y: -1.4693878}
-      - {x: 0.04465393, y: -1.4693878}
-      - {x: 0.17465393, y: -1.4393878}
-      - {x: 0.4046539, y: -1.3693877}
+    - - {x: 0.73499995, y: -0.24499999}
+      - {x: 0.815, y: 0.035}
+      - {x: 0.815, y: 0.225}
+      - {x: 0.645, y: 0.345}
+      - {x: 0.525, y: 0.385}
+      - {x: 0.475, y: 0.405}
+      - {x: 0.445, y: 0.415}
+      - {x: 0.285, y: 0.355}
+      - {x: 0.185, y: 0.445}
+      - {x: 0.13499999, y: 0.695}
+      - {x: 0.065, y: 0.755}
+      - {x: -0.095, y: 0.755}
+      - {x: -0.16499999, y: 0.72499996}
+      - {x: -0.405, y: 0.60499996}
+      - {x: -0.49499997, y: 0.545}
+      - {x: -0.655, y: 0.435}
+      - {x: -0.815, y: 0.285}
+      - {x: -0.815, y: 0.044999998}
+      - {x: -0.78499997, y: -0.095}
+      - {x: -0.645, y: -0.42499998}
+      - {x: -0.565, y: -0.555}
+      - {x: -0.375, y: -0.755}
+      - {x: 0.035, y: -0.755}
+      - {x: 0.265, y: -0.705}
+      - {x: 0.585, y: -0.575}
+      - {x: 0.655, y: -0.435}
 --- !u!212 &1980706381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17574,8 +17497,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3907543541546798770, guid: d735ebe5575b8e441a36558840d9388f,
-    type: 3}
+  m_Sprite: {fileID: 782734933048093391, guid: a54cd31e290bdce459f884b923dc9451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18699,7 +18621,7 @@ GameObject:
   - component: {fileID: 2142589040}
   - component: {fileID: 2142589039}
   m_Layer: 0
-  m_Name: power ore_4
+  m_Name: gold ore 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18731,11 +18653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1adfefa9acc454bb1656f3f60dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particule: {fileID: 8020683337004870007, guid: 8afe5d3048254cd46b81c1958003054e,
+  particule: {fileID: 5589482237794756591, guid: 9d2eeec6b9fb0304aa98c0fc6fae82b0,
     type: 3}
   type: 0
-  weight: 1.8
-  price: 278
+  weight: 2.3
+  price: 365
   description: xx
 --- !u!60 &2142589040
 PolygonCollider2D:
@@ -18753,8 +18675,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
-    oldSize: {x: 1.34, y: 1.97}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.33, y: 1.97}
     newSize: {x: 1.34, y: 1.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -18762,34 +18684,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -1.4599999}
-      - {x: 0.66999996, y: -0.76}
-      - {x: 0.64, y: -0.53999996}
-      - {x: 0.61, y: -0.42999998}
-      - {x: 0.42, y: -0.11}
-      - {x: 0.32, y: -0.01}
-      - {x: 0.29999998, y: 0}
-      - {x: 0.089999996, y: 0}
-      - {x: 0.03, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.25, y: -0.17999999}
-      - {x: -0.5, y: -0.44}
-      - {x: -0.57, y: -0.48999998}
-      - {x: -0.66999996, y: -0.65}
-      - {x: -0.66999996, y: -0.90999997}
-      - {x: -0.62, y: -1.0699999}
-      - {x: -0.45, y: -1.37}
-      - {x: -0.35999998, y: -1.52}
-      - {x: -0.38, y: -1.5799999}
-      - {x: -0.31, y: -1.5999999}
-      - {x: -0.22, y: -1.73}
-      - {x: -0.07, y: -1.89}
-      - {x: 0, y: -1.9399999}
-      - {x: 0.049999997, y: -1.9699999}
-      - {x: 0.32999998, y: -1.9699999}
-      - {x: 0.57, y: -1.7099999}
-      - {x: 0.57, y: -1.64}
-      - {x: 0.65999997, y: -1.48}
+    - - {x: 0.66499996, y: -0.45499998}
+      - {x: 0.66499996, y: 0.145}
+      - {x: 0.635, y: 0.475}
+      - {x: 0.555, y: 0.635}
+      - {x: 0.39499998, y: 0.905}
+      - {x: 0.285, y: 0.98499995}
+      - {x: 0.085, y: 0.98499995}
+      - {x: -0.015, y: 0.945}
+      - {x: -0.24499999, y: 0.815}
+      - {x: -0.49499997, y: 0.555}
+      - {x: -0.59499997, y: 0.42499998}
+      - {x: -0.66499996, y: 0.315}
+      - {x: -0.66499996, y: 0.085}
+      - {x: -0.645, y: 0.024999999}
+      - {x: -0.565, y: -0.175}
+      - {x: -0.445, y: -0.42499998}
+      - {x: -0.205, y: -0.755}
+      - {x: -0.044999998, y: -0.935}
+      - {x: 0.065, y: -0.98499995}
+      - {x: 0.275, y: -0.98499995}
+      - {x: 0.345, y: -0.955}
+      - {x: 0.435, y: -0.84499997}
+      - {x: 0.60499996, y: -0.585}
 --- !u!212 &2142589041
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18829,7 +18746,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2071924208600012806, guid: d735ebe5575b8e441a36558840d9388f,
+  m_Sprite: {fileID: 6763243151293356361, guid: a54cd31e290bdce459f884b923dc9451,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -12,6 +12,7 @@ public class grabbed_object : MonoBehaviour
         dynamite,
         money_bag
     }
+    public GameObject particule;
     [SerializeField] private object_type type;
     [SerializeField] private float weight = 1;
     [SerializeField] private int price = 100;
@@ -29,6 +30,8 @@ public class grabbed_object : MonoBehaviour
     }
     public void explode()
     {
+        GameObject explosion = Instantiate(particule, transform.position, Quaternion.identity);
+        Destroy(explosion, 2f);
         Destroy(gameObject);
     }
 }

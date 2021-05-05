@@ -5,19 +5,32 @@ using TMPro;
 public class GameEngine : MonoBehaviour
 {   
     static int currentLevel = 0;//at main menu , will be static to all levels
+    public static bool lost_game = false;
+    public static bool won_game = false;
     private void Awake()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;    
     }
-    
+
+    private void Update()
+    {
+        if (lost_game == true) GameObject.Find("menues").transform.Find("LoseMenu").gameObject.SetActive(true);
+        if (won_game == true) GameObject.Find("menues").transform.Find("WinMenu").gameObject.SetActive(true);
+    }
+    void reset_gamestats()
+    {
+        lost_game = false;won_game = false;
+    }
     public void selectMain()
     {
-       // Player.newplayer();
+        reset_gamestats();
         SceneManager.LoadScene(0);
         currentLevel = 0;
     }
     public void startGame()
     {
+        Player.new_player = true;
+        reset_gamestats();
         string username = GameObject.Find("newgameMenu").transform.Find("name").transform.Find("name_area").transform.Find("name_field").transform.Find("text_area").transform.Find("text").GetComponent<TextMeshProUGUI>().text;
         if (username.Length>1) PlayerPrefs.SetString("user_name", username);
         else PlayerPrefs.SetString("user_name", "new player");
@@ -28,47 +41,21 @@ public class GameEngine : MonoBehaviour
     {
         Application.Quit();
     }
-    public void selectTutorial()
+
+    public void selectLevel(int lvl_index)
     {
-        if (SceneManager.GetSceneByBuildIndex(4) != null)//update when tutorial scene index changes
+        if(lvl_index==1)
+            Player.new_player = true;
+        reset_gamestats();
+        if (SceneManager.GetSceneByBuildIndex(lvl_index) != null)
         {
-           // Player.newplayer();
-            SceneManager.LoadScene(4);
-            currentLevel = 4;
+            SceneManager.LoadScene(lvl_index);
+            currentLevel = lvl_index;
         }
-        else Debug.Log("Error  !! Tutorial scene not found !!");
-    }
-    public void selectLevel1()
-    {
-        if (SceneManager.GetSceneByBuildIndex(1) != null)
-        {
-           // Player.newplayer();
-            SceneManager.LoadScene(1);
-            currentLevel = 1;
-        }
-        else Debug.Log("Error !! Scene 1 doesn't exist !!");
+        else Debug.Log("Error !! Scene"+ lvl_index + "doesn't exist !!");
 
     }
-    public void selectLevel2()
-    {
-        if (SceneManager.GetSceneByBuildIndex(2) != null)
-        {
-            SceneManager.LoadScene(2);
-            currentLevel = 2;
-        }
-        else Debug.Log("Error !! Scene 2 doesn't exist !!");
 
-    }
-    public void selectLevel3()
-    {
-        if (SceneManager.GetSceneByBuildIndex(3) != null)
-        {
-            SceneManager.LoadScene(3);
-            currentLevel = 3;
-        }
-        else Debug.Log("Error !! Scene 3 doesn't exist !!");
-
-    }
     public void pause()
     {
         Player.in_game = false;
@@ -79,15 +66,21 @@ public class GameEngine : MonoBehaviour
     }
     public void restart() //for retrying a level
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if(SceneManager.GetActiveScene().buildIndex==1)
+            Player.new_player = true;
+        reset_gamestats();
         Player.in_game = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
     public void nextLevel()
     {
-        if (currentLevel + 1 <= 4)
+        reset_gamestats();
+        if (currentLevel + 1 <= 5)
         {
-            SceneManager.LoadScene(currentLevel + 1);
             currentLevel++;
+            Debug.Log("Loading Level " + currentLevel+" !!");
+            SceneManager.LoadScene(currentLevel);
         }
         else selectMain();
     }
