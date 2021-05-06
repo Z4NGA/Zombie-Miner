@@ -29,6 +29,7 @@ public class GameEngine : MonoBehaviour
     }
     public void startGame()
     {
+        Player.in_game = true;
         Player.new_player = true;
         reset_gamestats();
         string username = GameObject.Find("newgameMenu").transform.Find("name").transform.Find("name_area").transform.Find("name_field").transform.Find("text_area").transform.Find("text").GetComponent<TextMeshProUGUI>().text;

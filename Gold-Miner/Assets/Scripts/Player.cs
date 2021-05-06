@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     {
         if (new_player)
         {
+            in_game = true;
             new_player = false;
             player_strength = 1;
             stone_knowledge = 1;
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            in_game = true;
             player_strength = PlayerPrefs.GetFloat("player_strength", player_strength);
             stone_knowledge = PlayerPrefs.GetFloat("stone_knowledge", stone_knowledge);
             gem_affinity = PlayerPrefs.GetFloat("gem_affinity", gem_affinity);
